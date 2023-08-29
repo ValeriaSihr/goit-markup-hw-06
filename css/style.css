@@ -94,16 +94,97 @@ img {
   margin-bottom: 72px;
 }
 
-.hide {
-  display: none;
+
+/*HEADER*/
+
+
+.header-style {
+
 }
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1158px) {
+  
+}
+
+
+/*Mobile menu*/
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
 
 /*big field*/
 /*mob*/
 .group {
-  padding: 112px;
+  padding: 112px 0;
   margin: 0 auto;
-  max-width: 428px;
+  max-width: 1440px;
   text-align: center;
   background-image: linear-gradient(rgba(46, 47, 66, 0.70),
       rgba(46, 47, 66, 0.70)),
@@ -163,7 +244,6 @@ screen and (min-resolution: 2dppx) {
 /*tab*/
 @media screen and (min-width: 768px) {
   .group {
-    max-width: 768px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70),
       rgba(46, 47, 66, 0.70)),
     url(../images/tab-office1x.jpg);
@@ -306,14 +386,6 @@ screen and (min-resolution: 2dppx) {
 /*desc*/
 @media screen and (min-width: 1158px) {
   
-  @media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-  .box-picture {image: url(../images/sec-2-monitor@2x.jpg), 
-    url(../images/sec-2-phone@2x.jpg), 
-    url(../images/sec-2-phone_moni@2x.jpg);}
-}
-
 .box-section {
   padding-bottom: 120px;
   display: block;
@@ -517,59 +589,418 @@ screen and (min-resolution: 2dppx) {
 .footer-style {
   background-color: var(--color-dark);
   padding: 97.5px 0 96px 0;
+  
 }
 
 .footer-container {
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
+  flex-direction: column;
+  
 }
 
 .footer-logo-container {
-  align-items: baseline;
-  margin-bottom: 72px;
+  align-items: center;
+  margin-bottom: 17.5px;
+}
+
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 17.5px;
+}
+
+.logo-right-invert {
+  color: var(--color-light);
+}
+
+.footer-paragraph {
+  color: var(--color-light);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  max-width: 268px;
+}
+
+.social-media-text {
+  color: var(--color-white-background);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.32px;
+  margin-bottom: 16px;
+  align-items: center;
+  display: flex;
+}
+
+.footer-social-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-social-item {
+  height: 40px;
+  width: 40px;
+}
+
+.footer-social-icon {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary-brand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-icon:hover,
+.footer-social-icon:focus {
+  background-color: var(--color-success);
+  fill: var(--color-light);
+}
+
+.social-svg {
+  fill: var(--color-light);
+}
+
+.foot-set {
+  padding-bottom: 72px;
+
+}
+
+.foot-text {
+  color: var(--white, #FFF);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  margin-bottom: 16px;
+}
+
+.foot-email {
+padding-bottom: 16px;
+}
+
+.foot-label {
+  display: flex;
+}
+
+.foot-input {
+  border: 1px solid var(--color-white-background);
+  color: var(--color-white-background);
+  background-color: transparent;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 398px;
+  height: 40px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  line-height: 2.0;
+  padding: 16px 15px;
+}
+
+.foot-input::placeholder {
+  color: var(--white, #FFF);
+}
+
+.foot-button {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-white-background);
+  cursor: pointer;
+  background: var(--color-primary-brand);
+  border: none;
+  border-radius: 4px;
+}
+
+.foot-button:hover,
+.foot-button:focus {
+  background-color: var(--color-pressed-state);
+}
+
+.foot-svg {
+  fill: var(--color-white-background);
+  margin-left: 16px;
 }
 
 @media screen and (min-width: 768px) {
-   .footer-style {
+  
+.footer-style {
   padding: 96px 0;
 }
 .footer-logo-container {
   margin-right: 24px;
 }
+.footer-paragraph {  
+  max-width: 264px;
+}
+
+.foot-input {
+  width: 264px;
+}
 }
 
 @media screen and (min-width: 1158px) {
-  .footer-style {
+  
+.footer-style {
   padding: 100px 0;
 }
 .footer-logo-container {
   margin-right: 120px;
 }
+
+.foot-set {
+  padding-left: 80px;
+
+}
+
+.foot-email {
+  display: flex;
+  gap: 24px;
+}
+.foot-input {
+  padding-left: 16px;
+}
+}
+/*MODAL*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
 
+.backdrop.is-hidden.modal {
+  transform: translateX(-50%) translateY(70%);
+  opacity: 0;
+}
 
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 392px;
+  min-height: 584px;
+  background: var(--color-modal-background);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 16px 24px 16px;
+}
 
+.modal-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--color-dark);
+  
+}
 
+.modal-button:hover,
+.modal-button:focus {
+  background-color: var(--color-pressed-state);
+  border: none;
+}
 
+.modal-close {
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.modal-button:hover .modal-close,
+.modal-button:focus .modal-close {
+  fill: var(--color-white-background);
+}
 
+.modal-head {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--color-dark);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
 
+.modal-form {
+  margin-bottom: 8px;
+}
 
+.modal-label {
+  color: var(--color-subtle-text);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+  display: block;
+}
+.modal-input-box {
+  position: relative;
+}
 
+.modal-input {
+  fill: var(--color-dark);
+  height: 40px;
+  width: 100%;
+  padding-left: 34px;
+  background-color: transparent;
+  outline: transparent;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.modal-input:focus {
+  outline: transparent;
+  border-color: var(--color-primary-brand);
+  padding-left: 38px;
+}
 
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--color-dark);
+}
 
+.modal-icon:hover,
+.modal-icon:focus {
+  fill: var(--color-primary-brand);
+}
 
+.modal-input:focus + .modal-icon {
+  fill: var(--color-primary-brand);
+}
 
+.modal-com-area {
+  margin-bottom: 16px;
+}
 
+.modal-textarea {
+  resize: none;
+  height: 120px;
+  width: 100%;
+  outline: transparent;border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.modal-textarea:focus {
+  outline: transparent;
+  border-color: var(--color-primary-brand);
+}
 
+.modal-checkbox-set {
+  margin-bottom: 24px;
+}
 
+.modal-checkbox-text {
+  display: flex;
+  align-items: center;
+  display: block;
+}
 
+.modal-checkbox-icon {
+  fill: transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.check-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.modal-checkbox.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    border: 0;
+}
+
+input[type="checkbox"]:checked + .modal-checkbox-text > .modal-checkbox-icon {
+  background-color: var(--color-pressed-state);
+  fill: var(--color-light);
+  border: none;
+}
+
+.modal-link {
+  color: var(--color-primary-brand);
+}
+
+@media screen and (min-width: 768px) {
+ 
+ .modal {
+  width: 408px;
+  padding: 72px 25px 24px 23px;
+}
+}
+
+@media screen and (min-width: 1158px) {
+
+  .modal-input {
+    padding-left: 38px;
+  }
+}
 
 
  /*PORTFOLIO*/
