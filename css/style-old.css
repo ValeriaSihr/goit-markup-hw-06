@@ -1,108 +1,140 @@
 
 
-/*HEADER*/
-.header-style {
-  border-bottom: 1px solid var(--color-accent);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+.footer-logo-container {
+  align-items: baseline;
+  margin-right: 120px;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav-style {
-  display: flex;
-  align-items: center;
-}
-
-.logo-font {
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--color-primary-brand);
-}
-
-.logo-header {
-  margin-right: 76px;
-}
-
-.logo-right {
-  color: var(--color-dark);
-}
-
-.style-menu {
-  display: flex;
-  gap: 40px;
-}
-
-.header-link {
-  color: var(--color-dark);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  flex-wrap: wrap;
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
-  padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-.header-link:hover,
-.header-link:focus {
-  color: var(--color-pressed-state);
-  text-decoration: none;
-}
-
-.header-address {
-  font-style: normal;
-  display: flex;
-  gap: 40px;
-}
-
-.address-style {
-  display: flex;
-  gap: 40px;
-}
-
-.header-address-link {
+.logo-footer {
   display: inline-block;
-  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.logo-right-invert {
+  color: var(--color-light);
+}
+
+.footer-paragraph {
+  color: var(--color-light);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  letter-spacing: 0.02em;
+  max-width: 264px;
+}
+
+.social-media-text {
+  color: var(--color-white-background);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5em;
   letter-spacing: 0.32px;
-  padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 16px;
 }
 
-
-.header-address-link:hover,
-.header-address-link:focus {
-  color: var(--color-pressed-state);
+.footer-social-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.line {
-  position: relative;
-  color: var(--color-pressed-state);
+.footer-social-item {
+  height: 40px;
+  width: 40px;
 }
 
-.line::after {
-  background-color: #404bbf;
-  height: 4px;
+.footer-social-icon {
   width: 100%;
-  border-radius: 2px;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  content: '';
+  height: 100%;
+  background-color: var(--color-primary-brand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.footer-social-icon:hover,
+.footer-social-icon:focus {
+  background-color: var(--color-success);
+  fill: var(--color-light);
+}
+
+.social-svg {
+  fill: var(--color-light);
+}
+
+.foot-set {
+  padding-left: 80px;
+
+}
+
+.foot-text {
+  color: var(--white, #FFF);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  margin-bottom: 16px;
+}
+
+.foot-email {
+  display: flex;
+  gap: 24px;
+}
+
+.foot-label {
+  display: flex;
+}
+
+.foot-input {
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  font-size: 12px;
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--color-white-background);
+  padding-left: 16px;
+  color: var(--color-white-background);
+  background-color: transparent;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.foot-input::placeholder {
+  color: var(--white, #FFF);
+}
+
+.foot-button {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-white-background);
+  cursor: pointer;
+  background: var(--color-primary-brand);
+  border: none;
+  border-radius: 4px;
+}
+
+.foot-button:hover,
+.foot-button:focus {
+  background-color: var(--color-pressed-state);
+}
+
+.foot-svg {
+  fill: var(--color-white-background);
+  margin-left: 16px;
+}
+
