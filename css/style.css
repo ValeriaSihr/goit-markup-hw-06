@@ -389,9 +389,6 @@ img {
     
   }
 
-
-
-
 /*big field*/
 /*mob*/
 .group {
@@ -983,7 +980,9 @@ screen and (min-resolution: 2dppx) {
    display: flex;
    align-items: baseline;
    max-width: 584px;
-   flex-direction: column;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 24px;
         
     }
       
@@ -1000,6 +999,7 @@ screen and (min-resolution: 2dppx) {
     align-items: center;
     justify-content: center;
     max-width: 428px;
+    
     
      }
   .footer-logo-container {
@@ -1042,11 +1042,10 @@ screen and (min-resolution: 2dppx) {
 @media screen and (min-width: 1158px) {
 
 .footer-container {
-  display: flex;
   justify-content: flex-start;
   align-items: baseline;
   flex-direction: row;
-  display: -webkit-inline-box;
+  max-width: 1158px;
    }
   
 .footer-social-box {
@@ -1062,7 +1061,7 @@ screen and (min-resolution: 2dppx) {
   }  
 
 .foot-set {
-  padding-left: 80px;
+  margin-left: auto;
 
 } 
 .foot-input {
