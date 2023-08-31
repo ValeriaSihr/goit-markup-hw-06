@@ -327,14 +327,14 @@ img {
   line-height: 1.11;
   letter-spacing: 0.72px;
   text-transform: capitalize;
-  justify-content: space-between;
+  
 }
 
 .mobile-menu-box {
-   display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between; 
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between; 
 }
 
 .mobile-menu-link {
@@ -348,7 +348,7 @@ img {
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.72px;
-    justify-content: space-between;
+   
 }
 
 .mobile-menu-link:hover,
